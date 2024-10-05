@@ -67,13 +67,6 @@ img {
     object-fit: cover;
     box-shadow: 8px 8px 5px 6px var(--text-dark);
 }
-  footer {
-    background-color: var(--primary-color);
-    color: var(--text-light);
-    padding: 10px 0;
-    text-align: center;
-    font-size: 40px;
-}
 @media screen and (min-width: 700px) {
     h1 {
         display: grid;
