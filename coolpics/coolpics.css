@@ -1,99 +1,149 @@
-/* small */
-@import url("https://fonts.googleapis.com/css2?family=family=Mooli&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mooli&display=swap");
 :root {
---primary-color: #52489c;
---secondary-color: #59c3c3;
---accent-color: #f45b69;
---text-dark: #333;
---text-light: #ebebeb;
---primary-font: Arial, Helvetica,sans-serif;
---secondary-font: Mooli, san-serif;
+    --primary-color: #52489c;
+    --secondary-color: #59c3c3;
+    --accent-color: #f45b69;
+    --text-dark: #333;
+    --text-light: #ebebeb;
+    --primary-font: Arial, Helvetica,sans-serif;
+    --secondary-font: Mooli, san-serif;
 }
-body {
-    font-family: var(--primary-font);
-    font-size: 1.2em;
-    background-color: var(--primary-color);
-    margin: 0;
-  }
-a:link,
-a:visited {
-    color: var(--text-light);
-}
-header {
-    color: var(--text-light);
-    margin: 0 auto;
-    text-align: center;
-    font-size: 1.5em;
-}
-header p {
-    font-size: 1.3em;
-    margin-bottom: -10px;
-}
-nav {
-    margin: 0 auto;
-    font-size: 1.2em;
-    
-}
-nav ul {
-    list-style-type: none;
-    padding: 0;
-    text-decoration: underline;
-}
-nav ul li {
-    margin: 8px 0;
-}
-main {
-    background-color: var(--text-light);
-    align-content: center;
-    justify-content: center;
-    display: flex;
-}
-.gallery {
-    display: grid;
-    text-align: center;
-}
-h1 {
-    font-size: 1.6em;
-    display: grid;
-    text-align: center;
-}
-footer {
-    color: var(--text-light);
-    margin-left: 20px;
-}
-img {
-    border: solid 5px white;
-    max-width: 100%;
-    object-fit: cover;
-    box-shadow: 8px 8px 5px 6px var(--text-dark);
+@media screen and (min-width: 100px) {
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+    header nav ul {
+        display: flex;
+        flex-direction: column;
+    }
+    .viewer {
+        display: flex;
+        justify-content: center;
+        padding: 2%;
+    }
+    .viewer img {
+        max-width: 100%;
+        max-height: 100%;
+        width: auto;
+        height: auto;
+    }
+    img {
+        border: solid 5px white;
+        max-width: 100%;
+        object-fit: cover;
+        box-shadow: 8px 8px 5px 6px var(--text-dark);
+    }
 }
 @media screen and (min-width: 700px) {
-    h1 {
-        display: grid;
-        text-align:center;
-    }
     .gallery {
         grid-template-columns: 1fr 1fr;
     }
-    .menu-items {
-        display: none;
+    header nav ul {
+        display: flex;
+        flex-direction: column;
     }
 }
-@media screen and (min-width: 1000px) {
-    .toggle-menu {
-        display: none;
-    }
-    .menu-items {
-        display: block;
+@media (min-width: 1000px) {
+    header nav ul {
         display: flex;
+        justify-content: center;
+        align-items: center;
         flex-direction: row;
-        justify-content: space-around;
     }
-    h1 {
-        display: grid;
-        text-align:center;
+    header nav li {
+        display: inline-block;
+        margin-right: 10px;
+    }
+    header nav a {
+        display: inline;
     }
     .gallery {
         grid-template-columns: 1fr 1fr 1fr;
     }
+    #menu {
+        display: none;
+    }
+    .viewer {
+        margin: 5%;
+        display: flex;
+        justify-content: center;
+    }
+    .viewer img {
+        width: auto;
+        height: auto;
+        max-width: 90%; 
+        max-height: 100%; 
+    }
+}
+header, footer {
+    background-color: #534B9A;
+    color: white;
+    font-size: 26px;
+    text-align: center;
+}
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    font-size: 26px;
+    display: block;
+}
+nav li {
+    font-size: 16px;
+    display: block;
+}
+nav a {
+    display: block;
+    padding: 10px;
+}
+li a {
+    color: white;
+}
+h1 {
+    text-align: center;
+    font-family: 'Mooli';
+}
+a:link, a:visited {
+    color: var(--text-light);
+}
+body {
+    font-family: var(--primary-font);
+    font-size: 1.2em;
+}
+.gallery img {
+    text-align: center;
+}
+.gallery img {
+    max-width: 100%;
+    height: 250px;
+    width: 250px;
+}
+.gallery {
+    display: grid;
+    place-items: center;
+}
+#menu {
+    background: none;
+    border: none;
+    color: inherit;
+    font: inherit;
+    padding: 10px;
+}
+.viewer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    display: grid;
+    place-items: center;
+    color: white;
+}
+.close-viewer {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
 }
