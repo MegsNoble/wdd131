@@ -1,0 +1,138 @@
+body {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+.card-container {
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.card-form {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.card {
+    width: 100%;
+    height: 220px;
+    border-radius: 10px;
+    background: lightgray;
+    padding-top: 20px;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+}
+.card.card-back {
+    top: 30px;
+    left: 150px;
+    z-index: 0;
+}
+.strip {
+    width: 100%;
+    height: 40px;
+    background: #000;
+    margin-bottom: 20px;
+}
+.card-back .form-group {
+    margin-left: auto;
+    margin-right: 20px;
+}
+.card-back .form-group input {
+    width: 80px;
+    text-align: center;
+}
+.card-front {
+    z-index: 1;
+    position: relative;
+    margin-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-shadow: 0 0 10px grey;
+}
+.card .display-card-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+.form-group label {
+    font-size: 14px;
+    display: block;
+    margin-bottom: 5px;
+}
+.form-group input {
+    width: 90%;
+    padding: 10px;
+    border: solid 1px black;
+    font-size: 16px;
+    background: white;
+    color: black;
+}
+.form-row {
+    display: flex;
+}
+.form-row .form-group {
+    flex: 1;
+}
+.form-row .card-holder {
+    margin-right: 30px;
+}
+.expiration-inputs {
+    display: flex;
+    gap: 10px;
+}
+.expiration-inputs input {
+    width: 50px;
+}
+.form-row .submit-button {
+    padding: 10px 20px;
+    border: solid 2px black;
+    border-radius: 5px;
+    background-color: lightgray;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+.submit-button:hover {
+    background-color: #3b5998;
+}
+.card-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+.form-row.submit-button-row {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    position: absolute;
+    bottom: -70px;
+    left: 140px;
+}
+.submit-button {
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+    font-size: 16px;
+    cursor: pointer;
+}
+.submit-button:hover {
+    background-color: #f0f0f0;
+}
