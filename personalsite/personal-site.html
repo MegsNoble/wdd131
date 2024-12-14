@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meg's Lil Soul Patches | Stickers | Home</title>
+    <link rel="stylesheet" href="personal-site.css">
+    <script src="personal-site.js" defer></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        header {
+            position: sticky;
+            top: 0;
+            background: linear-gradient(to right, #6B9080, #A4C3B2);
+            padding: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .navi-list li a {
+            color: white;
+            font-size: 1.2em;
+            transition: color 0.3s ease;
+        }
+        .navi-list li a:hover {
+            color: #EAF4F4;
+            text-decoration: underline;
+        }
+        .logo {
+            animation: floatLogo 2s ease-in-out infinite;
+        }
+        @keyframes floatLogo {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+        footer {
+            background: linear-gradient(to right, #A4C3B2, #6B9080);
+            text-align: center;
+            color: white;
+            padding: 20px;
+        }
+        footer .social img {
+            width: 30px;
+            margin: 0 10px;
+            transition: transform 0.3s ease;
+        }
+        footer .social img:hover {
+            transform: scale(1.2);
+        }
+        #dark-mode-toggle {
+            background: #6B9080;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        #dark-mode-toggle:hover {
+            background: #A4C3B2;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navi">
+            <ul class="navi-list">
+                <li><a href="personal-site.html">Stickers</a></li>
+                <li class="centered-logo">
+                    <a href="personal-site.html">
+                        <img class="logo" src="Images/M.png" alt="M Logo" title="Go to Meg's Lil Soul Patches Home">
+                    </a>
+                </li>
+                <li><a href="bio.html">Bio</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="home-grid">
+        <section class="stickers-gallery">
+            <h1>Sticker Collection</h1>
+            <input type="text" id="search-bar" placeholder="Search Stickers..." />
+            <div class="gallery">
+                <div class="gallery-item">
+                    <img src="images/Signed Ghost.jpg" alt="Cute Ghost Sticker">
+                    <p>Cute Ghost</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/Signed Pumpkin Cat.jpg" alt="Pumpkin Cat Sticker">
+                    <p>Pumpkin Cat</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/Star Sticker.jpg" alt="Cute Star Sticker">
+                    <p>Star Sticker</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/Fox sticker.jpg" alt="Cute Fall Fox Sticker">
+                    <p>Fall Fox</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/Panda.jpg" alt="Cute Panda Sticker">
+                    <p>Panda</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/Cheetah.jpg" alt="Cute Cheetah Sticker">
+                    <p>Cheetah</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>Meg's Lil Soul Patches Stickers &copy; 20XX - Megan Grubaugh</p>
+        <p><a href="site-plan.html">Site Plan</a></p>
+        <p><a href="Contact Us">Contact Us</a></p>
+        <div class="social">
+            <a href="https://facebook.com" target="_blank">
+                <img src="Images/facebook.png" alt="Facebook">
+            </a>
+            <a href="https://twitter.com" target="_blank">
+                <img src="images/twitter.png" alt="Twitter">
+            </a>
+            <a href="https://www.instagram.com/megs_lil_soulpatches/?hl=en" target="_blank">
+                <img src="images/instagram.png" alt="Instagram">
+            </a>
+        </div>
+        <button id="dark-mode-toggle">Toggle Dark Mode</button>
+    </footer>
+    <script>
+        // Dark mode toggle functionality
+        const darkModeToggle = document.getElementById("dark-mode-toggle");
+        darkModeToggle.addEventListener("click", () => {
+            document.body.classList.toggle("dark-mode");
+        });
+
+        // Search functionality
+        const searchBar = document.getElementById("search-bar");
+        const galleryItems = document.querySelectorAll(".gallery-item");
+
+        searchBar.addEventListener("input", (e) => {
+            const query = e.target.value.toLowerCase();
+            galleryItems.forEach(item => {
+                const description = item.querySelector("p").textContent.toLowerCase();
+                item.style.display = description.includes(query) ? "" : "none";
+            });
+        });
+    </script>
+</body>
+</html>

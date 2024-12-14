@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meg's Lil Soul Patches | Bio</title>
+    <link rel="stylesheet" href="personal-site.css">
+    <script src="personal-site.js" defer></script>
+    <style>
+        header {
+            position: sticky;
+            top: 0;
+            background: linear-gradient(to right, #6B9080, #A4C3B2);
+            padding: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .navi-list li a {
+            color: white;
+            font-size: 1.2em;
+            transition: color 0.3s ease;
+        }
+        .navi-list li a:hover {
+            color: #EAF4F4;
+            text-decoration: underline;
+        }
+        .logo {
+            animation: floatLogo 2s ease-in-out infinite;
+        }
+        @keyframes floatLogo {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+        footer {
+            background: linear-gradient(to right, #A4C3B2, #6B9080);
+            text-align: center;
+            color: white;
+            padding: 20px;
+        }
+        footer .social img {
+            width: 30px;
+            margin: 0 10px;
+            transition: transform 0.3s ease;
+        }
+        footer .social img:hover {
+            transform: scale(1.2);
+        }
+        .bio-section img {
+            max-width: 250px;
+            height: auto;
+            border-radius: 50%;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            margin: 20px auto;
+            display: block;
+        }
+        .bio-section h1 {
+            font-size: 2.5rem;
+            color: #6B9080;
+        }
+        .bio-section p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <nav class="navi">
+        <ul class="navi-list">
+            <li><a href="personal-site.html">Stickers</a></li>
+            <li class="centered-logo">
+                <a href="personal-site.html">
+                    <img class="logo" src="Images/M.png" alt="M Logo" title="Go to Meg's Lil Soul Patches Home">
+                </a>
+            </li>
+            <li><a href="bio.html">Bio</a></li>
+        </ul>
+    </nav>
+</header>
+<main class="home-grid">
+    <section class="bio-section">
+        <h1>About Meg</h1>
+        <div>
+            <img class="Megan" src="Images/meg.png" alt="Megan">
+        </div>
+        <p>Welcome to Meg's Lil Soul Patches! I'm Megan Grubaugh, the creative mind behind these delightful stickers. Each design is crafted with love and inspired by the whimsical and soulful moments in life. Whether you're looking for something cute, quirky, or heartfelt, my stickers are here to add a spark of joy to your day!</p>
+        <p>When I'm not designing stickers, I love exploring nature, drinking copious amounts of hot chocolate, and cuddling with my cats, Stormy and Shadow. Thank you for stopping by, and I hope you find a sticker that speaks to your soul!</p>
+    </section>
+</main>
+<footer>
+    <p>Meg's Lil Soul Patches Stickers &copy; 20XX - Megan Grubaugh</p>
+    <p><a href="site-plan.html">Site Plan</a></p>
+    <p><a href="Contact Us">Contact Us</a></p>
+    <div class="social">
+        <a href="https://facebook.com" target="_blank">
+            <img src="Images/facebook.png" alt="Facebook">
+        </a>
+        <a href="https://twitter.com" target="_blank">
+            <img src="images/twitter.png" alt="Twitter">
+        </a>
+        <a href="https://www.instagram.com/megs_lil_soulpatches/?hl=en" target="_blank">
+            <img src="images/instagram.png" alt="Instagram">
+        </a>
+    </div>
+</footer>
+</body>
+</html>
+

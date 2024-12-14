@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Indie+Flower&display=swap');
+
+:root {
+    --primary-color: #A4C3B2;
+    --secondary-color: #CCE3DE;
+    --accent1-color: #6B9080;
+    --accent2-color: #EAF4F4;
+    --dark-bg-color: #333;
+    --dark-text-color: #eee;
+    --heading-font: "'Architects Daughter', 'Indie Flower', 'fantasy'";
+    --paragraph-font: Georgia, 'Times New Roman', Times, serif;
+}
+
+body {
+    background-color: var(--primary-color);
+    color: black;
+}
+
+body.dark-mode {
+    background-color: var(--dark-bg-color);
+    color: var(--dark-text-color);
+}
+
+#content {
+    max-width: 1600px;
+    margin: 0 auto; 
+    text-align: center;
+}
+
+ul, li {
+    list-style-type: none;
+    background-color: var(--primary-color);
+}
+
+body.dark-mode ul, body.dark-mode li {
+    background-color: var(--dark-bg-color);
+    color: var(--dark-text-color);
+}
+
+.navi-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.navi-list li:not(.centered-logo) {
+    flex: 1 0 auto;
+    text-align: center;
+    font-family: var(--heading-font);
+    font-size: 25px;
+}
+
+.logo {
+     padding: 10px;
+     width: 200px;
+     border-radius: 50%;
+}
+
+nav a:hover {
+    color: var(--accent2-color);
+}
+
+nav a {
+    text-align: center;
+    text-decoration: none;
+    padding: 35px;
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 25px 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+body.dark-mode footer {
+    background-color: var(--dark-bg-color);
+    color: var(--dark-text-color);
+}
+
+footer p {
+    font-size: 1.2em;
+    align-self: center;
+}
+
+footer .social img {
+    padding-top: 15px;
+}
+
+footer a {
+    color: black;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: var(--accent2-color);
+}
+
+.home-grid {
+    padding: 20px;
+    text-align: center;
+}
+
+.stickers-gallery {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.stickers-gallery h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+}
+
+.gallery-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.gallery-item img {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.gallery-item p {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+body.dark-mode .gallery-item p {
+    color: var(--dark-text-color);
+}
+
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+    width: 300px;
+    max-width: 90%;
+}
+
+body.dark-mode .popup-content {
+    background: var(--dark-bg-color);
+    color: var(--dark-text-color);
+}
+
+.popup-content .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: black;
+}
+
+body.dark-mode .popup-content .close-btn {
+    color: var(--dark-text-color);
+}
